@@ -1,11 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // Match your backend PORT
+// ⚠️ Fixed: Removed leading space in URL
+const API_BASE_URL = 'https://d7ab-113-19-181-82.ngrok-free.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
+    'ngrok-skip-browser-warning': 'true',
   },
 });
 
